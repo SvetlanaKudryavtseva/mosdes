@@ -1,0 +1,41 @@
+.material{
+  display:flex;
+  text-align:center;
+  width: 90%;
+  justify-content: center;
+  flex-wrap:wrap;
+}
+
+.material-link {
+  text-decoration:none;
+  color: #000;
+}
+.material-link:hover{
+  color: #ee3338;
+}
+.material-item {
+  border: 1px solid #eee;
+    position: relative;
+  display: inline-block;
+}
+.material-img{
+  padding: 1rem;
+
+}
+.material-img-top {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  padding: 1rem;
+}
+.material-item:hover .material-img-top {
+        display: inline;
+    }
+@media all and (max-width: 1078px){
+  .material{
+    width: 60%;
+    margin: 0 auto;
+  }
+}
