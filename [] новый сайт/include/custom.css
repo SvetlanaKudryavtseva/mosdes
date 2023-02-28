@@ -1,0 +1,37 @@
+/*** Вложенные нумерованные списки ***/
+ol {
+  list-style: none;
+  counter-reset: li;
+}
+
+ol li:before {
+	counter-increment: li; 
+	content: counters(li,".") ". ";
+
+}
+.odered-list>li:before{
+	font-size: 2rem;
+}
+.odered-list>li>span {
+	font-size: 2rem;
+	line-height: 3;
+}
+
+.odered-list ul {
+	margin-left: 3rem;
+}
+
+ol ul li:before {
+	counter-increment: none!important;
+	/*content: ""!important;*/
+}
+
+.odered-list table {
+	padding-left: 2rem;
+}
+.odered-list table td {
+    padding: 2rem;
+    border-collapse: collapse;
+    border: 1px solid #eee;
+}
+/*** end Вложенные нумерованные списки ***/
