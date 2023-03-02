@@ -13,7 +13,7 @@ for($index = 0, $itemSize = count($arResult); $index < $itemSize; ++$index){
 	else{
 		if(empty($arResult[$index]["LINK"]))
 		    $arResult[$index]["LINK"] = "#bx_breadcrumb_".$index;
-		$strReturn .= '<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" id="bx_breadcrumb_'.$index.'" class="active"><link href="'.$arResult[$index]["LINK"].'" itemprop="item" /><span><span itemprop="name">'.$title.'</span></span><meta itemprop="position" content="'.$position.'" /></li>';
+		$strReturn .= '<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" id="bx_breadcrumb_'.$index.'" class="active"><link href="'.$arResult[$index]["LINK"].'" itemprop="item" /><a href="'.GetPagePath().'"><span><span itemprop="name">'.$title.'</span></span></a><meta itemprop="position" content="'.$position.'" /></li>';
 		break;
 	}
 	++$position;
